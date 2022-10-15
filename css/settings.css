@@ -1,0 +1,689 @@
+/* start general rules  */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --bg-color: #eee;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* start media query  */
+@media (max-width: 767px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1199px) {}
+
+/* end media query  */
+
+
+/* start global classes*/
+.active {
+    background-color: var(--bg-color);
+}
+
+.section {
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    text-transform: capitalize;
+}
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    letter-spacing: .5px;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.section-sub-title {
+    color: gray;
+    font-size: 11px;
+}
+
+/* end global classes  */
+
+/* end general rules ============================================== */
+
+body {
+    display: flex;
+}
+
+/* start aside ============================================= */
+aside {
+    padding: 20px;
+    box-shadow: 1px 0 10px 0px rgb(0 0 0 / 20%);
+    width: 15%;
+}
+
+aside p {
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto 30px;
+    padding: 15px;
+    font-weight: 700;
+    font-size: clamp(14px, 2vw, 1.3rem);
+    position: relative;
+}
+
+aside p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    margin-left: 10%;
+    height: 2px;
+    background-color: black;
+}
+
+aside p::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    translate: -50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid white;
+}
+
+aside ul li {
+    border-radius: 6px;
+    transition: .3s all ease;
+}
+
+aside ul li:hover {
+    background-color: var(--bg-color);
+}
+
+aside ul li a {
+    padding: 12px;
+    padding-left: 0;
+    color: black;
+    display: block;
+    position: relative;
+}
+
+aside ul li a::before {
+    content: attr(data-category);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    font-size: 16px;
+    translate: 0 -50%;
+}
+
+aside ul li a i {
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    aside {
+        padding: 5px;
+    }
+
+    aside p {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto 10px;
+    }
+
+    aside p::before,
+    aside p::after {
+        display: none;
+    }
+
+    aside ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside ul li a {
+        padding-left: 12px;
+    }
+
+    aside ul li a::before {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    aside {
+        padding: 15px;
+        width: 20%;
+    }
+}
+
+/* end aside ============================== */
+/* start container =========================================================*/
+.container {
+    flex-grow: 1;
+    background-color: #f5f5f6;
+    overflow-x: hidden;
+    width: 85%;
+}
+
+/* start header styling in container  */
+.container header {
+    display: flex;
+    background-color: #eee;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.container header .search-input {
+    position: relative;
+}
+
+.container header .search-input::before {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.container header input {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 30px;
+    width: 100%;
+    color: #aaa;
+    font-weight: 300;
+    transition: .5s all ease;
+}
+
+.container header input::placeholder {
+    font-size: .8rem;
+    color: #aaa;
+}
+
+.container header input:focus {
+    outline: none;
+    border: 1px solid #ddd;
+    width: 110%;
+}
+
+.container header .user-logo {
+    display: flex;
+    align-items: center;
+}
+
+.container header .user-logo i,
+.container header .user-logo img {
+    cursor: pointer;
+}
+
+.container header .user-logo i {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.container header .user-logo i::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    top: -8px;
+    right: -4px;
+}
+
+.container header .user-logo img {
+    width: 30px;
+}
+
+/* end header styling in container  */
+/* start content styling in container */
+.container .wrapper {
+    padding-inline: 10px;
+}
+
+.container .wrapper .title {
+    position: relative;
+    width: fit-content;
+    margin: 15px 10px 25px 0;
+    padding-bottom: 10px;
+}
+
+.container .wrapper .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 5px;
+    background-color: black;
+    z-index: 1;
+}
+
+.container .wrapper .title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 90%;
+    height: 5px;
+    background-color: white;
+    z-index: 0;
+}
+
+.container .wrapper .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.container .wrapper .content section {
+    width: calc((100% - 40px) / 3);
+}
+
+@media (max-width: 767px) {
+    .container header .search-input {
+        width: 70%;
+    }
+
+    .container header input {
+        font-size: 13px;
+    }
+
+    .container header input:focus {
+        width: 100%;
+    }
+
+    .container header .user-logo i:first-of-type {
+        margin-right: 10px;
+    }
+
+    .container .wrapper .content section {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container .wrapper .content section {
+        width: calc((100% - 40px) / 2);
+    }
+}
+
+/* end container styling =============================================== */
+/* start site-control section  */
+
+/* create the switcher =================== */
+.switch {
+    display: flex;
+}
+
+.switch .icons {
+    width: 60px;
+    background-color: blue;
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.switch .icons i {
+    color: white;
+    font-size: 18px;
+}
+
+.switch .icons:focus {
+    background-color: grey;
+}
+
+.switch .icons .xmark {
+    display: none;
+}
+
+.switch #checker {
+    appearance: none;
+}
+
+.switch #checker:checked+label .icons {
+    justify-content: flex-start;
+    background-color: rgb(143, 143, 143);
+}
+
+.switch #checker:checked+label .icons .done {
+    display: none;
+}
+
+.switch #checker:checked+label .icons .xmark {
+    display: block;
+}
+
+/* end of the switcher =================== */
+section.site-control .section-body .control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+section.site-control .section-body .control .text {
+    margin-right: 40px;
+}
+
+section.site-control .section-body .control .text h5 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+section.site-control .section-body .control .text p {
+    font-size: 10px;
+    color: gray;
+}
+
+section.site-control .section-body textarea {
+    display: block;
+    width: 100%;
+    height: 160px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 5px;
+    resize: none;
+    text-transform: capitalize;
+}
+
+section.site-control .section-body textarea:focus {
+    outline: none;
+}
+
+section.site-control .section-body textarea::placeholder {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: grey;
+}
+
+/* end site-control section  */
+/* start general info section  */
+section.general-info label {
+    display: block;
+    margin-bottom: 10px;
+    color: #757575;
+    font-size: 15px;
+}
+
+section.general-info input {
+    display: block;
+    width: 100%;
+    border: 1px solid #9e9e9e;
+    padding: 5px 10px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+section.general-info .email-input input {
+    width: 80%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+section.general-info .email-input .email-btn {
+    color: blue;
+}
+
+section.general-info input:focus {
+    outline: none;
+}
+
+section.general-info input::placeholder {
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+@media (max-width: 767px) {
+    section.general-info .email-input input {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.general-info .email-input input {
+        width: 75%;
+    }
+}
+
+/* end general info section  */
+/* start security info section  */
+section.security-info .section-body .password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding-bottom: 10px;
+}
+
+section.security-info .section-body .password h5 {
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+section.security-info .section-body .password p {
+    color: #757575;
+    font-size: 13px;
+}
+
+section.security-info .section-body .password a {
+    display: block;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+section.security-info .section-body .control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+section.security-info .section-body .control .text h5 {
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+section.security-info .section-body .control .text p {
+    font-size: 10px;
+    color: gray;
+}
+
+.switch #checker2 {
+    appearance: none;
+}
+
+.switch #checker2:checked+label .icons {
+    justify-content: flex-start;
+    background-color: rgb(143, 143, 143);
+}
+
+.switch #checker2:checked+label .icons .done {
+    display: none;
+}
+
+.switch #checker2:checked+label .icons .xmark {
+    display: block;
+}
+
+section.security-info .section-body .devices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+section.security-info .section-body .devices h5 {
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+section.security-info .section-body .devices p {
+    color: #757575;
+    font-size: 13px;
+}
+
+section.security-info .section-body .devices a {
+    display: block;
+    background-color: #bdbdbd;
+    color: black;
+    padding: 5px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* end security info section  */
+/* start social media section  */
+section.social-info .section-body li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #f5f5f5;
+    border: 1px solid #9e9e9e;
+    border-radius: 6px;
+    height: 30px;
+}
+
+section.social-info .section-body li span {
+    display: block;
+    width: 25px;
+    position: relative;
+    height: 100%;
+    border-right: 1px solid #9e9e9e;
+}
+
+section.social-info .section-body i {
+    color: #757575;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+section.social-info .section-body input {
+    background: transparent;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    flex-grow: 1;
+}
+
+section.social-info .section-body input::placeholder {
+    font-size: 13px;
+}
+
+/* end social media section  */
+/* start widget section  */
+section.widgets .section-body li {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+section.widgets .section-body li input {
+    margin-right: 5px;
+}
+
+/* end widget section  */
+/* start backup section  */
+section.backup .section-body .backup-time {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+section.backup .section-body .backup-time li {
+    margin-bottom: 10px;
+}
+
+section.backup .section-body .backup-location ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section.backup .section-body .backup-location ul li {
+    width: calc((100% - 40px) / 3);
+}
+
+section.backup .section-body .backup-location ul li input {
+    appearance: none;
+}
+
+section.backup .section-body .backup-location ul li input:checked+label {
+    border-color: blue;
+}
+
+section.backup .section-body .backup-location ul li input:checked+label i {
+    color: blue;
+}
+
+section.backup .section-body .backup-location ul li input:checked+label p {
+    color: blue;
+}
+
+section.backup .section-body .backup-location ul li label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #bdbdbd;
+    border-radius: 6px;
+    padding: 15px 25px;
+}
+
+section.backup .section-body .backup-location ul li label i {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 767px) {
+    section.backup .section-body .backup-location ul {
+        flex-direction: column;
+    }
+
+    section.backup .section-body .backup-location ul li {
+        width: 100%;
+    }
+}
+
+/* end backup section  */

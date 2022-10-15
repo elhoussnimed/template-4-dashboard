@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Dashboard">
+    <meta name="author" content="El Houssni Mohammed">
+    <!-- add fontawsome  -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- add normalize for render thing normally  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- add google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- add the main css file  -->
+    <link rel="stylesheet" href="../css/settings.css">
+    <title>Settings | 2022</title>
+</head>
+
+<body>
+    <!-- navigation in all website sections  -->
+    <aside>
+        <p>elzero</p>
+        <ul>
+            <li><a data-category="Dashboard" href="../index.html"><i class="fa-solid fa-sliders"></i></a></li>
+            <li class="active"><a data-category="Settings" href="/html/settings.html"><i
+                        class="fa-solid fa-gear"></i></a></li>
+            <li><a data-category="Profile" href="profile.html"><i class="fa-regular fa-user"></i></a></li>
+            <li><a data-category="Projects" href="projects.html"><i class="fa-solid fa-diagram-project"></i></a></li>
+            <li><a data-category="Courses" href="courses.html"><i class="fa-solid fa-graduation-cap"></i></a></li>
+            <li><a data-category="Friends" href="friends.html"><i class="fa-solid fa-user-group"></i></a></li>
+            <li><a data-category="Files" href="files.html"><i class="fa-regular fa-file"></i></a></li>
+            <li><a data-category="Plans" href="plans.html"><i class="fa-regular fa-credit-card"></i></a></li>
+        </ul>
+    </aside>
+    <div class="container">
+        <!-- header with search bar  -->
+        <header>
+            <div class="search-input">
+                <input type="text" placeholder="Type A Keyword">
+            </div>
+            <div class="user-logo">
+                <i class="fa-regular fa-bell"></i>
+                <img src="../images/avatar.png" alt="">
+            </div>
+        </header>
+        <!-- main content  -->
+        <div class="wrapper">
+            <h1 class="title">Settings</h1>
+            <div class="content">
+                <section class="section site-control">
+                    <div class="section-header">
+                        <h4 class="section-title">site control</h4>
+                        <p class="section-sub-title">control the website if there is maintenance</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="control">
+                            <div class="text">
+                                <h5>website control</h5>
+                                <p>open/close website and type the reason</p>
+                            </div>
+                            <div class="switch">
+                                <input type="checkbox" name="" id="checker">
+                                <label for="checker">
+                                    <div class="icons">
+                                        <i class="fa-solid fa-circle-xmark xmark"></i>
+                                        <i class="fa-solid fa-circle-check done"></i>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <textarea cols="30" rows="10" placeholder="close message content"></textarea>
+                    </div>
+                </section>
+                <section class="section general-info">
+                    <div class="section-header">
+                        <h4 class="section-title">general info</h4>
+                        <p class="section-sub-title">general information about your account</p>
+                    </div>
+                    <div class="section-body">
+                        <label for="f-name">first name</label>
+                        <input type="text" id="f-name" placeholder="first name">
+                        <label for="l-name">last name</label>
+                        <input type="text" id="l-name" placeholder="last name">
+                        <div class="email-input">
+                            <label for="email">email</label>
+                            <input type="email" id="email" disabled placeholder="n@nn.cc">
+                            <a href="#" class="email-btn">change</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="section security-info">
+                    <div class="section-header">
+                        <h4 class="section-title">security info</h4>
+                        <p class="section-sub-title">security information about your account</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="password">
+                            <div>
+                                <h5>password</h5>
+                                <p>last change on 25/10/2021</p>
+                            </div>
+                            <a href="#">change</a>
+                        </div>
+                        <div class="control">
+                            <div class="text">
+                                <h5>two-factor authentication</h5>
+                                <p>enable/disable the feature</p>
+                            </div>
+                            <div class="switch">
+                                <input type="checkbox" name="" id="checker2">
+                                <label for="checker2">
+                                    <div class="icons">
+                                        <i class="fa-solid fa-circle-xmark xmark"></i>
+                                        <i class="fa-solid fa-circle-check done"></i>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="devices">
+                            <div>
+                                <h5>devices</h5>
+                                <p>check the login devices list</p>
+                            </div>
+                            <a href="#">devices</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="section social-info">
+                    <div class="section-header">
+                        <h4 class="section-title">social info</h4>
+                        <p class="section-sub-title">social media information</p>
+                    </div>
+                    <div class="section-body">
+                        <ul>
+                            <li>
+                                <span><i class="fa-brands fa-twitter"></i></span>
+                                <input type="text" placeholder="twitter username">
+                            </li>
+                            <li>
+                                <span><i class="fa-brands fa-facebook-f"></i></span>
+                                <input type="text" placeholder="facebook username">
+                            </li>
+                            <li>
+                                <span><i class="fa-brands fa-linkedin-in"></i></span>
+                                <input type="text" placeholder="linkedin username">
+                            </li>
+                            <li>
+                                <span><i class="fa-brands fa-youtube"></i></span>
+                                <input type="text" placeholder="youtube username">
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section widgets">
+                    <div class="section-header">
+                        <h4 class="section-title">widgets control</h4>
+                        <p class="section-sub-title">show/hide widgets</p>
+                    </div>
+                    <div class="section-body">
+                        <ul>
+                            <li>
+                                <input type="checkbox" checked name="" id="q-draft">
+                                <label for="q-draft">quick draft</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" checked name="" id="y-targets">
+                                <label for="y-targets">yearly targets</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" checked name="" id="t-statistics">
+                                <label for="t-statistics">ticket statistics</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" checked name="" id="l-news">
+                                <label for="l-news">latest news</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="" id="l-tasks">
+                                <label for="l-tasks">latest tasks</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" checked name="" id="t-s-items">
+                                <label for="t-s-items">top search items</label>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section backup">
+                    <div class="section-header">
+                        <h4 class="section-title">backup manager</h4>
+                        <p class="section-sub-title">control backup time and location</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="backup-time">
+                            <ul>
+                                <li>
+                                    <input type="radio" name="backup-time" checked id="daily">
+                                    <label for="daily">daily</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="backup-time" id="weekly">
+                                    <label for="weekly">weekly</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="backup-time" id="monthly">
+                                    <label for="monthly">monthly</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="backup-location">
+                            <ul>
+                                <li>
+                                    <input type="radio" name="backup-location" id="megaman">
+                                    <label for="megaman">
+                                        <i class="fa-solid fa-server"></i>
+                                        <p>megaman</p>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="backup-location" id="zero" checked>
+                                    <label for="zero">
+                                        <i class="fa-solid fa-server"></i>
+                                        <p>zero</p>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="backup-location" id="sigma">
+                                    <label for="sigma">
+                                        <i class="fa-solid fa-server"></i>
+                                        <p>sigma</p>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

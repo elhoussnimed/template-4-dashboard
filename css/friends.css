@@ -1,0 +1,429 @@
+/* start general rules  */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --bg-color: #eee;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* start media query  */
+@media (max-width: 767px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1199px) {}
+
+/* end media query  */
+
+
+/* start global classes*/
+.active {
+    background-color: var(--bg-color);
+}
+
+/* end global classes  */
+
+/* end general rules ============================================== */
+
+body {
+    display: flex;
+}
+
+/* start aside ============================================= */
+aside {
+    padding: 20px;
+    box-shadow: 1px 0 10px 0px rgb(0 0 0 / 20%);
+    width: 15%;
+}
+
+aside p {
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto 30px;
+    padding: 15px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: clamp(14px, 2vw, 1.3rem);
+    position: relative;
+}
+
+aside p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    margin-left: 10%;
+    height: 2px;
+    background-color: black;
+}
+
+aside p::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    translate: -50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid white;
+}
+
+aside ul li {
+    border-radius: 6px;
+    transition: .3s all ease;
+}
+
+aside ul li:hover {
+    background-color: var(--bg-color);
+}
+
+aside ul li a {
+    padding: 12px;
+    padding-left: 0;
+    color: black;
+    display: block;
+    position: relative;
+}
+
+aside ul li a::before {
+    content: attr(data-category);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    font-size: 16px;
+    translate: 0 -50%;
+}
+
+aside ul li a i {
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    aside {
+        padding: 5px;
+    }
+
+    aside p {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto 10px;
+    }
+
+    aside p::before,
+    aside p::after {
+        display: none;
+    }
+
+    aside ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside ul li a {
+        padding-left: 12px;
+    }
+
+    aside ul li a::before {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    aside {
+        padding: 15px;
+        width: 20%;
+    }
+}
+
+/* end aside ============================== */
+/* start container =========================================================*/
+.container {
+    flex-grow: 1;
+    background-color: #f5f5f6;
+    overflow-x: hidden;
+    width: 85%;
+    padding-bottom: 20px;
+}
+
+/* start header styling in container  */
+.container header {
+    display: flex;
+    background-color: #eee;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.container header .search-input {
+    position: relative;
+}
+
+.container header .search-input::before {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.container header input {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 30px;
+    width: 100%;
+    color: #aaa;
+    font-weight: 300;
+    transition: .5s all ease;
+}
+
+.container header input::placeholder {
+    font-size: .8rem;
+    color: #aaa;
+}
+
+.container header input:focus {
+    outline: none;
+    border: 1px solid #ddd;
+    width: 110%;
+}
+
+.container header .user-logo {
+    display: flex;
+    align-items: center;
+}
+
+.container header .user-logo i,
+.container header .user-logo img {
+    cursor: pointer;
+}
+
+.container header .user-logo i {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.container header .user-logo i::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    top: -8px;
+    right: -4px;
+}
+
+.container header .user-logo img {
+    width: 30px;
+}
+
+/* end header styling in container  */
+/* start content styling in container */
+.container .wrapper {
+    padding-inline: 10px;
+}
+
+.container .wrapper .title {
+    position: relative;
+    width: fit-content;
+    margin: 15px 10px 25px 0;
+    padding-bottom: 10px;
+}
+
+.container .wrapper .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 5px;
+    background-color: black;
+    z-index: 1;
+}
+
+.container .wrapper .title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 90%;
+    height: 5px;
+    background-color: white;
+    z-index: 0;
+}
+
+@media (max-width: 767px) {
+    .container header .search-input {
+        width: 70%;
+    }
+
+    .container header input {
+        font-size: 13px;
+    }
+
+    .container header input:focus {
+        width: 100%;
+    }
+
+    .container header .user-logo i:first-of-type {
+        margin-right: 10px;
+    }
+
+}
+
+/* start content styling =========================================================== */
+
+.content {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.content .friend {
+    padding: 15px;
+    background: white;
+    text-transform: capitalize;
+    width: calc((100% - 40px) / 5);
+    box-shadow: 1px 1px 1px 0px #00000040;
+    border-radius: 6px;
+}
+
+.content .friend .head {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9e9e9;
+    position: relative;
+}
+
+.content .friend .head .icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.content .friend .head .icons i {
+    font-size: 13px;
+    color: grey;
+    cursor: pointer;
+    display: block;
+    opacity: .8;
+    transition: 0.4s all ease;
+}
+
+.content .friend .head .icons i:hover {
+    opacity: 1;
+}
+
+.content .friend .head .friend-info {
+    text-align: center;
+}
+
+.content .friend .head .friend-info img {
+    width: 70px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.content .friend .head .friend-info h4 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.content .friend .head .friend-info span {
+    color: grey;
+    font-size: 14px;
+}
+
+.content .friend .body {
+    padding-block: 20px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.content .friend .body>div:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.content .friend .body div i {
+    font-size: 13px;
+    width: 10%;
+}
+
+.content .friend .body div span {
+    font-size: 13px;
+}
+
+.content .friend .action {
+    padding-block: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .friend .action p {
+    font-size: 12px;
+    color: grey;
+}
+
+.content .friend .action button {
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.content .friend .action button:first-of-type {
+    background-color: blue;
+}
+
+.content .friend .action button:last-of-type {
+    background-color: red;
+}
+
+@media (max-width: 767px) {
+    .content .friend {
+        width: 100%;
+    }
+
+    .content .friend .action {
+        gap: 10px;
+    }
+
+    .content .friend .action p {
+        flex-grow: 1;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .content .friend {
+        width: calc((100% - 10px) / 2);
+    }
+}

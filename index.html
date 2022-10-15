@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Dashboard">
+    <meta name="author" content="El Houssni Mohammed">
+    <!-- add fontawsome  -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- add normalize for render thing normally  -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- add google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- add the main css file  -->
+    <link rel="stylesheet" href="./css/master.css">
+    <title>Dashboard | 2022</title>
+</head>
+
+<body>
+    <!-- navigation in all website sections  -->
+    <aside>
+        <p>elzero</p>
+        <ul>
+            <li class="active"><a data-name="index" data-category="Dashboard" href="index.html"><i
+                        class="fa-solid fa-sliders"></i></a>
+            </li>
+            <li><a data-name="settings" data-category="Settings" href="./html/settings.html"><i
+                        class="fa-solid fa-gear"></i></a></li>
+            <li><a data-name="profile" data-category="Profile" href="./html/profile.html"><i
+                        class="fa-regular fa-user"></i></a></li>
+            <li><a data-name="projects" data-category="Projects" href="./html/projects.html"><i
+                        class="fa-solid fa-diagram-project"></i></a></li>
+            <li><a data-name="courses" data-category="Courses" href="./html/courses.html"><i
+                        class="fa-solid fa-graduation-cap"></i></a></li>
+            <li><a data-name="friends" data-category="Friends" href="./html/friends.html"><i
+                        class="fa-solid fa-user-group"></i></a></li>
+            <li><a data-name="files" data-category="Files" href="./html/files.html"><i
+                        class="fa-regular fa-file"></i></a></li>
+            <li><a data-name="plans" data-category="Plans" href="./html/plans.html"><i
+                        class="fa-regular fa-credit-card"></i></a></li>
+        </ul>
+    </aside>
+    <div class="container">
+        <!-- header with search bar  -->
+        <header>
+            <div class="search-input">
+                <input type="text" placeholder="Type A Keyword">
+            </div>
+            <div class="user-logo">
+                <i class="fa-regular fa-bell"></i>
+                <img src="./images/avatar.png" alt="">
+            </div>
+        </header>
+        <!-- main content  -->
+        <div class="wrapper">
+            <h1 class="title">Dashboard</h1>
+            <div class="content">
+                <section class="section welcome">
+                    <div class="head">
+                        <div class="infos">
+                            <h4 class="section-title">welcome</h4>
+                            <p class="section-sub-title">elzero</p>
+                        </div>
+                        <div class="welcome-img">
+                            <img src="./images/welcome.png" alt="welcome picture">
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="profile-img">
+                            <img src="./images/avatar.png" alt="">
+                        </div>
+                        <div class="infos">
+                            <div class="name">
+                                <p>osama el zero</p>
+                                <p>developer</p>
+                            </div>
+                            <div class="projects">
+                                <p>80</p>
+                                <p>projects</p>
+                            </div>
+                            <div class="earned">
+                                <p>$8500</p>
+                                <p>earned</p>
+                            </div>
+                        </div>
+                        <div class="section-link-parent">
+                            <a class="section-link" href="#">profile</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="section draft">
+                    <h4 class="section-title">quick draft</h4>
+                    <p class="section-sub-title">write a draft for your ideas</p>
+                    <input type="text" placeholder="title">
+                    <textarea cols="30" rows="10" placeholder="your thought"></textarea>
+                    <div class="section-link-parent">
+                        <a class="section-link" href="#">save</a>
+                    </div>
+                </section>
+                <section class="section target">
+                    <h4 class="section-title">yearly targets</h4>
+                    <p class="section-sub-title">targets of the yearly</p>
+                    <ul class="target-items">
+                        <li class="item">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <div class="infos">
+                                <h6>money</h6>
+                                <p>$20.000</p>
+                                <div data-progress="80%" class="progress"></div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <div class="infos">
+                                <h6>projects</h6>
+                                <p>24</p>
+                                <div data-progress="55%" class="progress"></div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <div class="infos">
+                                <h6>team</h6>
+                                <p>12</p>
+                                <div data-progress="75%" class="progress"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="section tickets">
+                    <h4 class="section-title">tickets statistics</h4>
+                    <p class="section-sub-title">everything about support tickets</p>
+                    <ul class="statisticks">
+                        <li>
+                            <i class="fa-regular fa-rectangle-list"></i>
+                            <h6>2500</h6>
+                            <p>total</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-rotate-right"></i>
+                            <h6>500</h6>
+                            <p>pending</p>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-circle-check"></i>
+                            <h6>1900</h6>
+                            <p>closed</p>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-rectangle-xmark"></i>
+                            <h6>100</h6>
+                            <p>deleted</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="section news">
+                    <h4 class="section-title">latest news</h4>
+                    <ul class="news">
+                        <li class="new">
+                            <img src="./images/news-01.png" alt="news picture 1">
+                            <div>
+                                <h6>created SASS section</h6>
+                                <p>new SASS exemples & tutorials</p>
+                            </div>
+                            <p>3 days ago</p>
+                        </li>
+                        <li class="new">
+                            <img src="./images/news-02.png" alt="news picture 1">
+                            <div>
+                                <h6>changed the design</h6>
+                                <p>a brand new website design</p>
+                            </div>
+                            <p>5 days ago</p>
+                        </li>
+                        <li class="new">
+                            <img src="./images/news-03.png" alt="news picture 1">
+                            <div>
+                                <h6>team increased</h6>
+                                <p>3 developers joined the team</p>
+                            </div>
+                            <p>7 days ago</p>
+                        </li>
+                        <li class="new">
+                            <img src="./images/news-04.png" alt="news picture 1">
+                            <div>
+                                <h6>added payment gateway</h6>
+                                <p>many new payment gateways added</p>
+                            </div>
+                            <p>9 days ago</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="section tasks">
+                    <h4 class="section-title">latest tasks</h4>
+                    <ul class="parent">
+                        <li class="task">
+                            <h6>record one new video</h6>
+                            <p>record python create exe projects</p>
+                        </li>
+                        <li class="task">
+                            <h6>write article</h6>
+                            <p>write low level VS high level languages</p>
+                        </li>
+                        <li class="task">
+                            <h6>finish project</h6>
+                            <p>publish academy programming project</p>
+                        </li>
+                        <li class="task deleted">
+                            <h6>attend the meeting</h6>
+                            <p>attend the project business analysis meeting</p>
+                        </li>
+                        <li class="task">
+                            <h6>finish lesson</h6>
+                            <p>finish teaching flex box</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="section search">
+                    <h4 class="section-title">top search items</h4>
+                    <div class="sub-title">
+                        <p class="section-sub-title">keyword</p>
+                        <span class="section-sub-title">search count</span>
+                    </div>
+                    <ul class="searched-items">
+                        <li>
+                            <h6>programming</h6>
+                            <p>220</p>
+                        </li>
+                        <li>
+                            <h6>javascript</h6>
+                            <p>180</p>
+                        </li>
+                        <li>
+                            <h6>PHP</h6>
+                            <p>160</p>
+                        </li>
+                        <li>
+                            <h6>code</h6>
+                            <p>145</p>
+                        </li>
+                        <li>
+                            <h6>design</h6>
+                            <p>110</p>
+                        </li>
+                        <li>
+                            <h6>logic</h6>
+                            <p>95</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="section uploads">
+                    <h4 class="section-title">latest uploads</h4>
+                    <ul class="uploads-files">
+                        <li class="file">
+                            <img src="./images/pdf.svg" alt="pdf file">
+                            <div>
+                                <h6>my-file.<span class="file-type">pdf</span></h6>
+                                <p>elzero</p>
+                            </div>
+                            <p>2.9mb</p>
+                        </li>
+                        <li class="file">
+                            <img src="./images/avi.svg" alt="avi file">
+                            <div>
+                                <h6>my-video-file.<span class="file-type">avi</span></h6>
+                                <p>admin</p>
+                            </div>
+                            <p>4.9mb</p>
+                        </li>
+                        <li class="file">
+                            <img src="./images/psd.svg" alt="psf file">
+                            <div>
+                                <h6>my-psd-file.<span class="file-type">psd</span></h6>
+                                <p>osama</p>
+                            </div>
+                            <p>4.5mb</p>
+                        </li>
+                        <li class="file">
+                            <img src="./images/zip.svg" alt="zip file">
+                            <div>
+                                <h6>my-zip-file.<span class="file-type">zip</span></h6>
+                                <p>user</p>
+                            </div>
+                            <p>8.9mb</p>
+                        </li>
+                        <li class="file">
+                            <img src="./images/dll.svg" alt="dll file">
+                            <div>
+                                <h6>my-DLL-file.<span class="file-type">dll</span></h6>
+                                <p>admin</p>
+                            </div>
+                            <p>4.9mb</p>
+                        </li>
+                        <li class="file">
+                            <img src="./images/eps.svg" alt="eps file">
+                            <div>
+                                <h6>my-eps-file.<span class="file-type">eps</span></h6>
+                                <p>designer</p>
+                            </div>
+                            <p>8.9mb</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="section projects">
+                    <h4 class="section-title">last project progress</h4>
+                    <ul class="project">
+                        <li class="step">
+                            <p>got the project</p>
+                        </li>
+                        <li class="step">
+                            <p>started the project</p>
+                        </li>
+                        <li class="step">
+                            <p>the project about to finish</p>
+                        </li>
+                        <li class="step in-progress">
+                            <p>test the project</p>
+                        </li>
+                        <li class="step not-started">
+                            <p>finish the project & get money</p>
+                        </li>
+                    </ul>
+                    <img src="./images/project.png" alt="project image" class="project-img">
+                </section>
+                <section class="section reminders">
+                    <h4 class="section-title">reminders</h4>
+                    <ul class="tasks-list">
+                        <li class="task">
+                            <h6>check my tasks list</h6>
+                            <p>28/09/2022 - 12:00am</p>
+                        </li>
+                        <li class="task">
+                            <h6>check my projects</h6>
+                            <p>26/12/2022 - 12:00am</p>
+                        </li>
+                        <li class="task">
+                            <h6>call all my clients</h6>
+                            <p>05/11/2022 - 12:00am</p>
+                        </li>
+                        <li class="task">
+                            <h6>finish the development workshop</h6>
+                            <p>20/12/2022 - 12:00am</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="section posts">
+                    <h4 class="section-title">latest post</h4>
+                    <div class="user">
+                        <img src="./images/avatar.png" alt="user avatar">
+                        <div>
+                            <h6>osama elZero</h6>
+                            <p>about 3 hours ago</p>
+                        </div>
+                    </div>
+                    <p class="post-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus vel,
+                        saepe minima dolorem cumque autem sapiente laborum reprehenderit? Nihil, impedit?</p>
+                    <div class="reaction">
+                        <div>
+                            <i class="fa-regular fa-heart"></i>
+                            <span>1.8k</span>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-comments"></i>
+                            <span>500</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="section social-media">
+                    <h4 class="section-title">social media stats</h4>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div class="infos">
+                                <p>2M like</p>
+                                <p>like</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div class="infos">
+                                <p>90k followers</p>
+                                <p>follow</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                            <div class="infos">
+                                <p>1M subscribers</p>
+                                <p>subscriber</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div class="infos">
+                                <p>70k followers</p>
+                                <p>follow</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="section projects-list">
+                    <h4 class="section-title">projects</h4>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>name</th>
+                                    <th>finish date</th>
+                                    <th>client</th>
+                                    <th>price</th>
+                                    <th>team</th>
+                                    <th>status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ministry wikipedia</td>
+                                    <td>10 may 2022</td>
+                                    <td>ministry</td>
+                                    <td>$5300</td>
+                                    <td>
+                                        <img src="./images/team-01.png" alt="">
+                                        <img src="./images/team-02.png" alt="">
+                                        <img src="./images/team-03.png" alt="">
+                                        <img src="./images/team-04.png" alt="">
+                                    </td>
+                                    <td class="pending">
+                                        <p>pending</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>elzero shop</td>
+                                    <td>12 oct 2021</td>
+                                    <td>elzero company</td>
+                                    <td>$1500</td>
+                                    <td>
+                                        <img src="./images/team-01.png" alt="">
+                                        <img src="./images/team-02.png" alt="">
+                                        <img src="./images/team-04.png" alt="">
+                                    </td>
+                                    <td class="in-progress">
+                                        <p>in progress</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>bouba app</td>
+                                    <td>05 sept 2021</td>
+                                    <td>bouba</td>
+                                    <td>$800</td>
+                                    <td>
+                                        <img src="./images/team-01.png" alt="">
+                                        <img src="./images/team-02.png" alt="">
+                                    </td>
+                                    <td class="complete">
+                                        <p>completed</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>mahmoud website</td>
+                                    <td>22 may 2021</td>
+                                    <td>mahmoud</td>
+                                    <td>$600</td>
+                                    <td>
+                                        <img src="./images/team-01.png" alt="">
+                                        <img src="./images/team-03.png" alt="">
+                                    </td>
+                                    <td class="complete">
+                                        <p>completed</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sayed website</td>
+                                    <td>24 may 2021</td>
+                                    <td>sayed</td>
+                                    <td>$300</td>
+                                    <td>
+                                        <img src="./images/team-02.png" alt="">
+                                        <img src="./images/team-04.png" alt="">
+                                    </td>
+                                    <td class="reject">
+                                        <p>rejected</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>arena application</td>
+                                    <td>01 mar 2021</td>
+                                    <td>arena company</td>
+                                    <td>$2600</td>
+                                    <td>
+                                        <img src="./images/team-01.png" alt="">
+                                        <img src="./images/team-02.png" alt="">
+                                        <img src="./images/team-03.png" alt="">
+                                        <img src="./images/team-04.png" alt="">
+                                    </td>
+                                    <td class="pending">
+                                        <p>pending</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

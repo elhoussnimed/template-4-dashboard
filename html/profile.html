@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Dashboard">
+    <meta name="author" content="El Houssni Mohammed">
+    <!-- add fontawsome  -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- add normalize for render thing normally  -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- add google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- add the main css file  -->
+    <link rel="stylesheet" href="../css/profile.css">
+    <title>Profile | 2022</title>
+</head>
+
+<body>
+    <!-- navigation in all website sections  -->
+    <aside>
+        <p>elzero</p>
+        <ul>
+            <li><a data-category="Dashboard" href="../index.html"><i class="fa-solid fa-sliders"></i></a></li>
+            <li><a data-category="Settings" href="/html/settings.html"><i class="fa-solid fa-gear"></i></a></li>
+            <li class="active"><a data-category="Profile" href="profile.html"><i class="fa-regular fa-user"></i></a>
+            </li>
+            <li><a data-category="Projects" href="projects.html"><i class="fa-solid fa-diagram-project"></i></a></li>
+            <li><a data-category="Courses" href="courses.html"><i class="fa-solid fa-graduation-cap"></i></a></li>
+            <li><a data-category="Friends" href="friends.html"><i class="fa-solid fa-user-group"></i></a></li>
+            <li><a data-category="Files" href="files.html"><i class="fa-regular fa-file"></i></a></li>
+            <li><a data-category="Plans" href="plans.html"><i class="fa-regular fa-credit-card"></i></a></li>
+        </ul>
+    </aside>
+    <div class="container">
+        <!-- header with search bar  -->
+        <header>
+            <div class="search-input">
+                <input type="text" placeholder="Type A Keyword">
+            </div>
+            <div class="user-logo">
+                <i class="fa-regular fa-bell"></i>
+                <img src="../images/avatar.png" alt="">
+            </div>
+        </header>
+        <!-- main content  -->
+        <div class="wrapper">
+            <h1 class="title">Profile</h1>
+            <div class="content">
+                <section class="profile">
+                    <div class="profile-user">
+                        <img src="../images/avatar.png" alt="user avatar">
+                        <h4>osama el zero</h4>
+                        <p>level 20</p>
+                        <progress max="30" value="20"></progress>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span>550 rating</span>
+                    </div>
+                    <div class="profile-info">
+                        <div class="general-info section">
+                            <h6>general information</h6>
+                            <div class="parent">
+                                <p>full name : <span>osama mohamed</span></p>
+                                <p>gender : <span>male</span></p>
+                                <p>country : <span>egypt</span></p>
+                                <div class="switch">
+                                    <input type="checkbox" name="" id="checker">
+                                    <label for="checker">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-circle-xmark xmark"></i>
+                                            <i class="fa-solid fa-circle-check done"></i>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-info section">
+                            <h6>personal information</h6>
+                            <div class="parent">
+                                <p>email : <span>o@nn.ca</span></p>
+                                <p>phone : <span>0123456789</span></p>
+                                <p>date of birth : <span>25/10/1982</span></p>
+                                <div class="switch2">
+                                    <input type="checkbox" name="" id="checker2">
+                                    <label for="checker2">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-circle-xmark xmark"></i>
+                                            <i class="fa-solid fa-circle-check done"></i>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-info section">
+                            <h6>job information</h6>
+                            <div class="parent">
+                                <p>title : <span>full stack developer</span></p>
+                                <p>programming language : <span>python</span></p>
+                                <p>years of experience : <span>15+</span></p>
+                                <div class="switch3">
+                                    <input type="checkbox" name="" id="checker3">
+                                    <label for="checker3">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-circle-xmark xmark"></i>
+                                            <i class="fa-solid fa-circle-check done"></i>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="billing-info section">
+                            <h6>billing information</h6>
+                            <div class="parent">
+                                <p>payment method : <span>paypal</span></p>
+                                <p>email : <span>email@website.com</span></p>
+                                <p>subscription : <span>monthly</span></p>
+                                <div class="switch4">
+                                    <input type="checkbox" name="" id="checker4">
+                                    <label for="checker4">
+                                        <div class="icons">
+                                            <i class="fa-solid fa-circle-xmark xmark"></i>
+                                            <i class="fa-solid fa-circle-check done"></i>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="profil-content">
+                    <section class="skills">
+                        <div class="skills-head">
+                            <h4>my skills</h4>
+                            <p>complete skills list</p>
+                        </div>
+                        <div class="skills-body">
+                            <div class="skill">
+                                <p>HTML</p>
+                                <p>pugjs</p>
+                                <p>HAML</p>
+                            </div>
+                            <div class="skill">
+                                <p>CSS</p>
+                                <p>SASS</p>
+                                <p>Stylus</p>
+                            </div>
+                            <div class="skill">
+                                <p>javaScript</p>
+                                <p>typeScript</p>
+                            </div>
+                            <div class="skill">
+                                <p>vueJs</p>
+                                <p>reactJs</p>
+                            </div>
+                            <div class="skill">
+                                <p>jest</p>
+                                <p>jasmine</p>
+                            </div>
+                            <div class="skill">
+                                <p>PHP</p>
+                                <p>laravel</p>
+                            </div>
+                            <div class="skill">
+                                <p>python</p>
+                                <p>django</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="latest-activities">
+                        <div class="activities-head">
+                            <h4>latest activities</h4>
+                            <p>latest activities done by the user</p>
+                        </div>
+                        <div class="activities-body">
+                            <div class="activity">
+                                <img src="../images/activity-01.png" alt="store avatar ">
+                                <div class="infos">
+                                    <h6>store</h6>
+                                    <p>bought the mastering python course</p>
+                                </div>
+                                <div class="time">
+                                    <h6>18:10</h6>
+                                    <p>yesterday</p>
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <img src="../images/activity-02.png" alt="academy avatar ">
+                                <div class="infos">
+                                    <h6>academy</h6>
+                                    <p>got the PHP certificate</p>
+                                </div>
+                                <div class="time">
+                                    <h6>16:05</h6>
+                                    <p>yesterday</p>
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <img src="../images/activity-03.png" alt="badge avatar ">
+                                <div class="infos">
+                                    <h6>badges</h6>
+                                    <p>unlocked the 10 skills badge</p>
+                                </div>
+                                <div class="time">
+                                    <h6>18:05</h6>
+                                    <p>yesterday</p>
+                                </div>
+                            </div>
+                            <div class="activity">
+                                <img src="../images/activity-01.png" alt="store avatar ">
+                                <div class="infos">
+                                    <h6>store</h6>
+                                    <p>bought the typeScript course</p>
+                                </div>
+                                <div class="time">
+                                    <h6>12:05</h6>
+                                    <p>yesterday</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

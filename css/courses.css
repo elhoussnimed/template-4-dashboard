@@ -1,0 +1,435 @@
+/* start general rules  */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --bg-color: #eee;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* start media query  */
+@media (max-width: 767px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1199px) {}
+
+/* end media query  */
+
+
+/* start global classes*/
+.active {
+    background-color: var(--bg-color);
+}
+
+/* end global classes  */
+
+/* end general rules ============================================== */
+
+body {
+    display: flex;
+}
+
+/* start aside ============================================= */
+aside {
+    padding: 20px;
+    box-shadow: 1px 0 10px 0px rgb(0 0 0 / 20%);
+    width: 15%;
+}
+
+aside p {
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto 30px;
+    padding: 15px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: clamp(14px, 2vw, 1.3rem);
+    position: relative;
+}
+
+aside p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    margin-left: 10%;
+    height: 2px;
+    background-color: black;
+}
+
+aside p::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    translate: -50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid white;
+}
+
+aside ul li {
+    border-radius: 6px;
+    transition: .3s all ease;
+}
+
+aside ul li:hover {
+    background-color: var(--bg-color);
+}
+
+aside ul li a {
+    padding: 12px;
+    padding-left: 0;
+    color: black;
+    display: block;
+    position: relative;
+}
+
+aside ul li a::before {
+    content: attr(data-category);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    font-size: 16px;
+    translate: 0 -50%;
+}
+
+aside ul li a i {
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    aside {
+        padding: 5px;
+    }
+
+    aside p {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto 10px;
+    }
+
+    aside p::before,
+    aside p::after {
+        display: none;
+    }
+
+    aside ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside ul li a {
+        padding-left: 12px;
+    }
+
+    aside ul li a::before {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    aside {
+        padding: 15px;
+        width: 20%;
+    }
+}
+
+/* end aside ============================== */
+/* start container =========================================================*/
+.container {
+    flex-grow: 1;
+    background-color: #f5f5f6;
+    overflow-x: hidden;
+    width: 85%;
+    padding-bottom: 20px;
+}
+
+/* start header styling in container  */
+.container header {
+    display: flex;
+    background-color: #eee;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.container header .search-input {
+    position: relative;
+}
+
+.container header .search-input::before {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.container header input {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 30px;
+    width: 100%;
+    color: #aaa;
+    font-weight: 300;
+    transition: .5s all ease;
+}
+
+.container header input::placeholder {
+    font-size: .8rem;
+    color: #aaa;
+}
+
+.container header input:focus {
+    outline: none;
+    border: 1px solid #ddd;
+    width: 110%;
+}
+
+.container header .user-logo {
+    display: flex;
+    align-items: center;
+}
+
+.container header .user-logo i,
+.container header .user-logo img {
+    cursor: pointer;
+}
+
+.container header .user-logo i {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.container header .user-logo i::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    top: -8px;
+    right: -4px;
+}
+
+.container header .user-logo img {
+    width: 30px;
+}
+
+/* end header styling in container  */
+/* start content styling in container */
+.container .wrapper {
+    padding-inline: 10px;
+}
+
+.container .wrapper .title {
+    position: relative;
+    width: fit-content;
+    margin: 15px 10px 25px 0;
+    padding-bottom: 10px;
+}
+
+.container .wrapper .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 5px;
+    background-color: black;
+    z-index: 1;
+}
+
+.container .wrapper .title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 90%;
+    height: 5px;
+    background-color: white;
+    z-index: 0;
+}
+
+@media (max-width: 767px) {
+    .container header .search-input {
+        width: 70%;
+    }
+
+    .container header input {
+        font-size: 13px;
+    }
+
+    .container header input:focus {
+        width: 100%;
+    }
+
+    .container header .user-logo i:first-of-type {
+        margin-right: 10px;
+    }
+
+}
+
+/* start content styling =========================================================== */
+.content {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content .course {
+    width: calc((100% - 90px) / 5);
+    text-transform: capitalize;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px 0px #00000040;
+}
+
+.content .course .head {
+    height: 170px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    padding: 10px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.content .course:nth-child(1) .head {
+    background-image: url(../images/course-01.jpg);
+}
+
+.content .course:nth-child(2) .head {
+    background-image: url(../images/course-02.jpg);
+}
+
+.content .course:nth-child(3) .head {
+    background-image: url(../images/course-03.jpg);
+}
+
+.content .course:nth-child(4) .head {
+    background-image: url(../images/course-04.jpg);
+}
+
+.content .course:nth-child(5) .head {
+    background-image: url(../images/course-05.jpg);
+}
+
+.content .course:nth-child(6) .head {
+    background-image: url(../images/course-04.jpg);
+}
+
+.content .course:nth-child(7) .head {
+    background-image: url(../images/course-02.jpg);
+}
+
+.content .course:nth-child(8) .head {
+    background-image: url(../images/course-01.jpg);
+}
+
+.content .course:nth-child(9) .head {
+    background-image: url(../images/course-05.jpg);
+}
+
+.content .course:nth-child(10) .head {
+    background-image: url(../images/course-03.jpg);
+}
+
+.content .course .head img {
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    translate: -50% -50%;
+}
+
+.content .course .body {
+    padding: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.content .course .body h6 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.content .course .body p {
+    font-size: 12px;
+    color: grey;
+    line-height: 1.6;
+}
+
+.content .course .course-info {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .course .course-info .course-info-btn {
+    padding: 5px;
+    background: blue;
+    color: white;
+    font-size: 13px;
+    border-radius: 6px;
+    position: relative;
+    top: -20px;
+    cursor: pointer;
+}
+
+.content .course .course-info i {
+    color: grey;
+    font-size: 15px;
+}
+
+.content .course .course-info .subscribers,
+.content .course .course-info .price {
+    font-size: 15px;
+    color: grey;
+}
+
+
+
+@media (max-width: 767px) {
+    .content .course {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .content .course {
+        width: calc((100% - 50px) / 2);
+    }
+}
